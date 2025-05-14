@@ -1,1 +1,1 @@
-denemedir canım meselA
+denemedir canım meselA Yani
