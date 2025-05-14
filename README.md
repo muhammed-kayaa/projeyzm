@@ -1,0 +1,1 @@
+denemedir canım
