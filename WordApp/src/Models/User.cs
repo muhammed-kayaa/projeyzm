@@ -5,17 +5,19 @@ namespace WordApp.Models
 {
     public class User
     {
-        public int Id { get; set; }
+        public int UserId { get; set; } // Id yerine UserId olmalı
         public string Username { get; set; }
         public string Password { get; set; }
 
-        public User(int id, string username, string password)
+        // Parametresiz constructor ekle
+        public User() { }
+
+        // Eğer varsa, aşağıdaki gibi bir constructor da olabilir:
+        public User(int userId, string username, string password)
         {
-            Id = id;
+            UserId = userId;
             Username = username;
             Password = password;
         }
-
-        // Additional methods related to user operations can be added here
     }
 }

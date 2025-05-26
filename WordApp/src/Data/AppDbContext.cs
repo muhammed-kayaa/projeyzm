@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using GirisSistemi.Models;
+using WordApp.Models;
 
 namespace WordApp.Data
 {
@@ -10,8 +10,7 @@ namespace WordApp.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=WordAppDb;Trusted_Connection=True;");
-
+            optionsBuilder.UseSqlServer("Server=localhost;Database=wordsapp;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

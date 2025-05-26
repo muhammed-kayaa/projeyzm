@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using GirisSistemi.Models;
 using Microsoft.EntityFrameworkCore;
+using WordApp.Models;
+using WordApp.Data;
 
 namespace WordApp.Services
 {
