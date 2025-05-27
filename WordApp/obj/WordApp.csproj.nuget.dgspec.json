@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\enesa\\OneDrive\\Documents\\GitHub\\projeyzm\\WordApp\\WordApp.csproj": {}
+    "C:\\Users\\kupis\\projeyzm-3\\WordApp\\WordApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\enesa\\OneDrive\\Documents\\GitHub\\projeyzm\\WordApp\\WordApp.csproj": {
+    "C:\\Users\\kupis\\projeyzm-3\\WordApp\\WordApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\enesa\\OneDrive\\Documents\\GitHub\\projeyzm\\WordApp\\WordApp.csproj",
+        "projectUniqueName": "C:\\Users\\kupis\\projeyzm-3\\WordApp\\WordApp.csproj",
         "projectName": "WordApp",
-        "projectPath": "C:\\Users\\enesa\\OneDrive\\Documents\\GitHub\\projeyzm\\WordApp\\WordApp.csproj",
-        "packagesPath": "C:\\Users\\enesa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\enesa\\OneDrive\\Documents\\GitHub\\projeyzm\\WordApp\\obj\\",
+        "projectPath": "C:\\Users\\kupis\\projeyzm-3\\WordApp\\WordApp.csproj",
+        "packagesPath": "C:\\Users\\kupis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kupis\\projeyzm-3\\WordApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\enesa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kupis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,8 +25,7 @@
           "net6.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
