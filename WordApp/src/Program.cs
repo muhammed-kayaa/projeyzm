@@ -126,11 +126,9 @@ namespace WordApp
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            // Basit örnek: Veritabanından kullanıcıyı kontrol et
             using (var db = new AppDbContext())
             {
-
-            var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+                var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
                 if (user != null)
                 {
                     LoggedInUser = user;
@@ -139,7 +137,12 @@ namespace WordApp
                 }
                 else
                 {
-                    lblError.Text = "Kullanıcı adı veya şifre hatalı!";
+                    // Kullanıcı adı hiç yoksa farklı mesaj göster
+                    bool userExists = db.Users.Any(u => u.Username == username);
+                    if (!userExists)
+                        lblError.Text = "Mevcut hesap bulunamadı, lütfen kayıt olun!";
+                    else
+                        lblError.Text = "Kullanıcı adı veya şifre hatalı!";
                     lblError.Visible = true;
                 }
             }

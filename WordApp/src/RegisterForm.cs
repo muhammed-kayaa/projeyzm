@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Windows.Forms;
 using WordApp.Models;
 using WordApp.Services;
@@ -66,6 +67,15 @@ public class RegisterForm : Form
         {
             using (var db = new AppDbContext())
             {
+                // Kullanıcı zaten var mı kontrol et
+                var existingUser = db.Users.FirstOrDefault(u => u.Username == username);
+                if (existingUser != null)
+                {
+                    lblError.Text = "Bu kullanıcı adı zaten kayıtlı!";
+                    lblError.Visible = true;
+                    return;
+                }
+
                 var userService = new UserService(db);
                 userService.CreateUser(new User { Username = username, Password = password });
             }
