@@ -9,10 +9,7 @@ namespace WordApp.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(
-                "Server=.;Database=WordApp;Trusted_Connection=True;",
-                sqlOptions => sqlOptions.EnableRetryOnFailure()
-            );
+            optionsBuilder.UseSqlServer("Server=.;Database=WordApp;Trusted_Connection=True;");
         }
     }
 }

@@ -129,7 +129,8 @@ namespace WordApp
             // Basit örnek: Veritabanından kullanıcıyı kontrol et
             using (var db = new AppDbContext())
             {
-                var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+
+            var user = db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
                 if (user != null)
                 {
                     LoggedInUser = user;
