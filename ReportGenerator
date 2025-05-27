@@ -1,0 +1,39 @@
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
+
+public void GenerateReport(List<ReportItem> report, string filePath){
+    Document.Create(container =>
+{
+        container.Page(page =>{
+            page.Margin(50);
+            page.Header().Text("Kullanıcı Başarı Raporu").FontSize(20).Bold();
+            page.Content().Table(table =>{
+                table.ColumnsDefinition(columns =>{
+                    columns.RelativeColumn();
+                    columns.RelativeColumn();
+                    columns.RelativeColumn();
+                    columns.RelativeColumn();
+                });
+
+                table.Header(header =>{
+
+                    header.Cell().Text("Doğru"); // Konu? !
+                    header.Cell().Text("Toplam");
+                    header.Cell().Text("Başarı ");
+                });
+
+                foreach (var item in report)
+                {
+                    table.Cell().Text(item.TopicName);
+                    table.Cell().Text(item.CorrectCount.ToString());
+                    table.Cell().Text(item.TotalCount.ToString());
+                    table.Cell().Text(item.SuccessPercent.ToString("0.00"));
+                }
+            });
+        });
+    }).GeneratePdf(filePath); // PDF oluşturma
+
+    System.Diagnostics.Process.Start("explorer.exe", filePath); // Oluşturulan PDF'i açma
+
+}
